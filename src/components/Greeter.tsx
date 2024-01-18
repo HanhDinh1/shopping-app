@@ -1,7 +1,15 @@
 import React from "react";
 
-function Greeter(): JSX.Element {
-    return <h1> Hello!!!</h1>
+interface GreeterProps {
+    person: string;
 }
+
+function Greeter(props: GreeterProps): JSX.Element {
+    return <h1> Hello, {props.person}!!!</h1>
+}
+
+// const Greeter: React.FC = () => {
+//     return <h1> Hello!!!</h1>
+// }
 
 export default Greeter;
